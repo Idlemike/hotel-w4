@@ -1,0 +1,58 @@
+.footer-small {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 76.8rem;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+
+    &_indents {
+        padding: 12rem 10.4rem 12rem 10.4rem;
+        margin-bottom: 14rem;
+    }
+
+    &__logo {
+        width: 10.6rem;
+        height: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    &__copyright {
+        font-weight: 400;
+        font-size: 14px;
+        //line-height: 17px;
+        color: $ds75-color;
+    }
+
+    &__icons {
+        margin-left: 0; /* Отступ слева в браузере IE и Opera */
+        padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+        & * {
+            font-size: 2.4rem;
+        }
+    }
+    &__icons li {
+        display: inline-block;
+        position: relative;
+        width: 2.4rem;
+        height: 2.4rem;
+        list-style-type: none;
+        &:not(:last-of-type) {
+            margin-right: 2rem;
+        }
+    }
+    &__icons li a i {
+        display: inline-block;
+        background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    //&____icon {
+    //    width: 2.4rem;
+    //    height: 2.4rem;
+    //    fill: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    //}
+}

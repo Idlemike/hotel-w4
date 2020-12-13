@@ -1,0 +1,19 @@
+extends ../base/default
+include ../../components/header-main/header-main
+include ../../components/footer-main/footer-main
+append config
+    - var title = "headers&footers"
+
+block content
+    .page_headers-footers.pb140
+        .brand_headers-footers
+            include ../../components/brand/_brand
+        .mb40
+            +header-main
+        .mb40
+            +header-login({name: 'Юлий Цезарь'})
+        .mb40
+            +footer-main
+            +subfooter
+        +footer-small
+

@@ -1,0 +1,43 @@
+.comfort {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    &__font-symbol .material-icons {
+        font-size: 4.8rem;
+        display: inline-block;
+        background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    &__photo {
+        margin-top: -1rem;
+        margin-left: -2.4rem;
+        margin-right: -2rem;
+        width: 8.8rem;
+    }
+    &__texts {
+        margin-left: 1rem;
+        flex-direction: column;
+        align-items: left;
+        justify-content: start;
+        line-height: 1.4rem;
+    }
+    &__text {
+        &_bold {
+            margin: 0;
+            margin-bottom: 1.4rem;
+            font-size: 1.4rem;
+            color: $ds75-color;
+            font-weight: 700;
+        }
+        &_regular {
+            display: inline-block;
+            width: 100%;
+            margin: 0;
+            font-size: 1.4rem;
+            color: $ds75-color;
+            font-weight: 400;
+        }
+    }
+}

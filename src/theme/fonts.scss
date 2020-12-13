@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-style: normal;
+  src:
+    url("../fonts/Montserrat-Bold.woff") format("woff"),
+    url("../fonts/Montserrat-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: normal;
+  src:
+    url("../fonts/Montserrat-Regular.woff") format("woff"),
+    url("../fonts/Montserrat-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-weight: 700;
+  font-style: normal;
+  src:
+    url("../fonts/Quicksand-Bold.woff") format("woff"),
+    url("../fonts/Quicksand-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-weight: 400;
+  font-style: normal;
+  src:
+    url("../fonts/Quicksand-Regular.woff") format("woff"),
+    url("../fonts/Quicksand-Regular.woff") format("woff");
+}
+
+/////////////////////////////////////////////////////////////////
+@font-face {
+  font-family: "icomoon";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/icomoon.eot?texz5z");
+  src:
+    url("../fonts/icomoon.eot?texz5z#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?texz5z") format("truetype"),
+    url("../fonts/icomoon.woff?texz5z") format("woff"),
+    url("../fonts/icomoon.svg?texz5z#icomoon") format("svg");
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  text-transform: none;
+  font-family: "icomoon" !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  speak: never;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-down::before {
+  content: "\e900";
+}
+
+.icon-chevron-small-down::before {
+  content: "\e901";
+}
+
+.icon-chevron-small-up::before {
+  content: "\e902";
+}
+
+.icon-chevron-up::before {
+  content: "\e903";
+}
+
+.icon-facebook::before {
+  content: "\e904";
+}
+
+.icon-instagram-with-circle::before {
+  content: "\e905";
+}
+
+.icon-twitter::before {
+  content: "\e906";
+}
+
+.icon-facebook2::before {
+  content: "\ea91";
+}
+
+.icon-instagram::before {
+  content: "\ea92";
+}
+
+.icon-twitter1::before {
+  content: "\ea96";
+}

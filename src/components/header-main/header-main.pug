@@ -1,0 +1,44 @@
+include ../dropdown/dropdown
+    include ../../components/buttons/buttons
+
+mixin header-main(options)
+    if !options
+        - options = {}
+
+    header.headers.headers_indents
+            a.router(href="./")
+                .headers__logo
+                    img.logo_img(src="/assets/img/logo_small.svg",
+                    alt =
+                    'emblem')
+            .headers__menu
+                .headers__about: a.headers__about_link(href="#") О нас
+                +dropdown_w_o_border('Услуги', 'header_services')
+                .headers__vacancy: a.headers__vacancy_link(href="#") Вакансии
+                .headers__news: a.headers__vacancy_link(href="#") Новости
+                +dropdown_w_o_border('Соглашения', 'header_agreements')
+                .mr20
+                    +btn-small-bordercolor('войти', 'btn-sm-bordercolor_header')
+                +btn-big-fullcolor('зарегестрироваться', 'btn-big')
+
+mixin header-login(options)
+    if !options
+        - options = {}
+
+    .headers.headers_indents
+        a.router(href="./")
+            .headers__logo
+                img.logo_img(src="/assets/img/logo_small.svg", alt = 'emblem')
+        .headers__menu
+            .headers__about: a.headers__about_link(href="#") О нас
+            +dropdown_w_o_border('Услуги', 'header_services')
+            .headers__vacancy: a.headers__vacancy_link(href="#") Вакансии
+            .headers__news: a.headers__vacancy_link(href="#") Новости
+            +dropdown_w_o_border('Соглашения', 'header_agreements')
+            .mr20
+                .headers__divider
+            h5.headers__user-name #{options.name}
+
+
+
+

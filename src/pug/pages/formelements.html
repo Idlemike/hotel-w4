@@ -1,0 +1,474 @@
+
+<!--block variables--><!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>form&amp;elements</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="author" content="Mihail Andrushenko">
+    <meta name="description" content="Web-application hotel">
+    <link rel="stylesheet" href="styles/icon_font.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")-->
+    <!--link(rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png")-->
+    <!--link(rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png")-->
+    <!--link(rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png")-->
+    <!--link(rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png")-->
+    <!--link(rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png")-->
+    <!--link(rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png")-->
+    <!--link(rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png")-->
+    <!--link(rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png")-->
+    <!--link(rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png")-->
+    <!--link(rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png")-->
+    <!--link(rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png")-->
+    <!--link(rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png")-->
+    <!--link(rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png")-->
+    <!--link(rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png")-->
+    <!--link(rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png")-->
+    <!--link(rel="stylesheet" href="styles/main.css")-->
+  </head>
+  <body>
+    <div class="page">
+      <div class="brand">
+        <div class="brand__content"><a class="router" href="./"><img class="brand-img" src="/assets/img/logo_big.svg" alt="log"></a></div>
+      </div>
+      <div class="container_formElements mt65 mb102">
+        <div class="subcontainer subcontainer_formElements">
+          <form>
+            <div class="input-container_mb20">
+              <div class="input-container">
+                <div class="input-container input-container_mb0 input-container_row input-container_row_sb">
+                  <label class="forms__input_label" for="Email">TEXT FIELD</label>
+                  <p class="forms__input_label forms__input_label_mb20_color5">DEFAULT</p>
+                </div>
+                <input class="forms__input forms__input_default" id="Email" type="Email" name="TEXT FIELD" placeholder="Email"/>
+              </div>
+            </div>
+            <div class="input-container_mb20">
+              <div class="input-container">
+                <div class="input-container input-container_mb0 input-container_row input-container_row_sb">
+                  <label class="forms__input_label" for="This is pretty awesome">TEXT FIELD</label>
+                  <p class="forms__input_label forms__input_label_mb20_color5">HOVER/FOCUS</p>
+                </div>
+                <input class="forms__input forms__input_default" id="This is pretty awesome" type="This is pretty awesome" name="TEXT FIELD" placeholder="This is pretty awesome"/>
+              </div>
+            </div>
+            <div class="input-container mb20">
+              <div class="input-container input-container_row input-container_row_sb">
+                <label class="forms__input_label" for="Сколько гостей">dropdown</label>
+                <p class="forms__input_label forms__input_label_mb20_color5"></p>
+              </div>
+              <select class="forms__input forms__input_select forms__input_select_color50" id="Сколько гостей" name="id" size="1">
+                <option></option>
+              </select>
+            </div>
+            <div class="mb40">
+              <div class="input-container">
+                <div class="input-container input-container_mb0 input-container_row input-container_row_sb">
+                  <label class="forms__input_label" for="ДД.ММ.ГГГГ">MASKED TEXT FIELD</label>
+                  <p class="forms__input_label forms__input_label_mb20_color5"></p>
+                </div>
+                <input class="forms__input forms__input_default" id="ДД.ММ.ГГГГ" type="ДД.ММ.ГГГГ" name="MASKED TEXT FIELD" placeholder="ДД.ММ.ГГГГ"/>
+              </div>
+            </div>
+            <div class="input-container__wrapper">
+              <div class="input-container mb40 w150">
+                <div class="input-container input-container_row input-container_row_sb">
+                  <label class="forms__input_label" for="dropdown-mask">date dropdown</label>
+                  <p class="forms__input_label forms__input_label_mb20_color5"></p>
+                </div>
+                <select class="forms__input forms__input_select forms__input_select_color50" id="dropdown-mask" name="id" size="1">
+                  <option value="ДД.ММ.ГГГГ">ДД.ММ.ГГГГ</option>
+                </select>
+              </div>
+              <div class="input-container mb40 w150">
+                <div class="input-container input-container_row input-container_row_sb">
+                  <label class="forms__input_label" for="dropdown-date">date dropdown</label>
+                  <p class="forms__input_label forms__input_label_mb20_color5"></p>
+                </div>
+                <select class="forms__input forms__input_select forms__input_select_color50" id="dropdown-date" name="id" size="1">
+                  <option value="19.08.2019">19.08.2019</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-container mb40 w266">
+              <div class="input-container input-container_row input-container_row_sb">
+                <label class="forms__input_label" for="dropdown-filter">filter date dropdown</label>
+                <p class="forms__input_label forms__input_label_mb20_color5"></p>
+              </div>
+              <select class="forms__input forms__input_select forms__input_select_color50" id="dropdown-filter" name="id" size="1">
+                <option value="19авг - 23 авг">19авг - 23 авг</option>
+              </select>
+            </div>
+            <div class="input-container">
+              <label class="forms__input_label" for="email-subscr">subscription text field</label>
+              <input class="forms__input forms__input_default forms__input_select_medium forms__input_arrow" id="email-subscr" type="email" name="email-subscr" placeholder="Email"/>
+            </div>
+          </form>
+        </div>
+        <div class="subcontainer subcontainer_formElements">
+          <form>
+            <p class="forms__input_label forms__input_label_mb16">Checkbox Buttons</p>
+            <div class="input-container input-container_mb20">
+              <div class="input-container input-container_mb10 input-container_row">
+                <input class="forms__check-box" id="Можно курить" type="checkbox" name="Можно курить"/>
+                <label class="forms__check-box_label" for="Можно курить">Можно курить</label>
+              </div>
+              <div class="input-container input-container_mb10 input-container_row">
+                <input class="forms__check-box" id="Можно с питомцами" type="checkbox" name="Можно с питомцами"/>
+                <label class="forms__check-box_label" for="Можно с питомцами">Можно с питомцами</label>
+              </div>
+              <div class="input-container input-container_mb10 input-container_row">
+                <input class="forms__check-box" id="Можно пригласить гостей до 10 человек" type="checkbox" name="Можно пригласить гостей до 10 человек"/>
+                <label class="forms__check-box_label" for="Можно пригласить гостей до 10 человек">Можно пригласить гостей до 10 человек</label>
+              </div>
+            </div>
+            <p class="forms__input_label forms__input_label_mb16">Radio Buttons</p>
+            <div class="input-container__wrapper">
+              <div class="input-container input-container_mb40 input-container_row">
+                <input class="forms__radio" id="radio-man" type="radio" name="Мужчина"/>
+                <label class="forms__check-box_label" for="radio-man">Мужчина</label>
+              </div>
+              <div class="input-container input-container_mb40 input-container_row">
+                <input class="forms__radio" id="radio-woman" type="radio" name="Женщина"/>
+                <label class="forms__check-box_label" for="radio-woman">Женщина</label>
+              </div>
+            </div>
+            <p class="forms__input_label forms__input_label_mb16">Toggle</p>
+            <div class="input-container_mb14">
+              <div class="input-container input-container_row">
+                <div class="button-toggle r" id="buttons-1">
+                  <input class="forms__toggle_on" id="toggle-on"/>
+                  <div class="knobs"></div>
+                  <div class="layer"></div>
+                </div>
+                <label class="forms__check-box_label forms__check-box_label_ml10" for="toggle-on">Получать спецпредложения</label>
+              </div>
+            </div>
+            <div class="input-container_mb40">
+              <div class="input-container input-container_row">
+                <div class="button-toggle r" id="buttons-1">
+                  <input class="forms__toggle_on" id="toggle-off"/>
+                  <div class="knobs"></div>
+                  <div class="layer"></div>
+                </div>
+                <label class="forms__check-box_label forms__check-box_label_ml10" for="toggle-off">Получать спецпредложения</label>
+              </div>
+            </div>
+            <p class="forms__input_label forms__input_label_mb16">like button</p>
+            <div class="input-container__wrapper_left input-container_mb40">
+              <div class="input-container input-container_width40">
+                <div class="button-toggle r" id="buttons-3">
+                  <input class="forms__toggle_on" id="like-off">
+                  <div class="heart"></div>
+                  <div class="layer"></div>
+                </div>
+              </div>
+              <div class="toggle-like" id="toggle-favorite"><i class="material-icons">favorite</i>
+                <p class="toggle-like__number">12</p>
+              </div>
+            </div>
+            <p class="forms__input_label forms__input_label_mb16">RATE BUTTON</p>
+            <div class="input-container_row_sb">
+              <div class="form-wrapper">
+                <div class="ratingStar_filled"></div>
+                <div class="ratingStar_filled"></div>
+                <div class="ratingStar_filled"></div>
+                <div class="ratingStar_filled"></div>
+                <div class="ratingStar_border"></div>
+              </div>
+              <div class="form-wrapper">
+                <div class="ratingStar_filled"></div>
+                <div class="ratingStar_filled"></div>
+                <div class="ratingStar_filled"></div>
+                <div class="ratingStar_filled"></div>
+                <div class="ratingStar_filled"></div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="subcontainer subcontainer_formElements">
+          <form>
+            <div class="input-container_mb40">
+              <div class="input-container input-container_row_sb_w266 input-container_mb14">
+                <p class="forms__input_label forms__input_label_mb20">Range Slider</p>
+                <p class="forms__input_label forms__input_label_mb20 forms__input_label_mb20_color5">5000₽ - 10 000₽</p>
+              </div><img src="/assets/img/input-range.svg">
+            </div>
+            <p class="forms__input_label forms__input_label_mb16">buttons</p>
+            <div class="input-container input-container__wrapper_w218 input-container_mb30">
+              <button class="buttons button__small buttons__small_fullcolor" data-modal="btn-sm-fullcolor">CLICK ME</button>
+              <button class="buttons button__small buttons__small_fadecolor" data-modal="btn-sm-fadecolor">CLICK ME</button>
+            </div>
+            <div class="input-container input-container_mb30 input-container__wrapper_w218">
+              <div class="gradient-box" data-modal="btn-sm-bordercolor">CLICK ME</div>
+              <button class="buttons buttons__small buttons__small_borderfade" data-modal="btn-sm-fadecolor">CLICK ME</button>
+            </div>
+            <div class="input-container input-container__wrapper_flexstart input-container__wrapper_mb30">
+              <p class="form__text-link form__text-link_mb30 form__text-link_mr20 form__text-link_fade">CLICK ME</p>
+              <p class="form__text-link form__text-link_mb30 form__text-link_strong">CLICK ME</p>
+            </div>
+            <div class="button__big_mb40">
+              <button class="buttons buttons__big_text" data-modal="btn-big">перейти к оплате</button>
+            </div>
+            <p class="forms__input_label forms__input_label_mb16">pagination</p>
+            <div class="pagination"><a class="pagination__item pagination__item_start" href="#">1</a><a class="pagination__item" href="#">2</a><a class="pagination__item" href="#">3</a><a class="pagination__item" href="#">...</a><a class="pagination__item" href="#">15</a><a class="pagination__item pagination__item_finish pagination__item_arrow" href="#"></a></div>
+          </form>
+        </div>
+      </div>
+      <div class="container_formElements mb102">
+        <div class="subcontainer subcontainer_formElements subcontainer_formElements_w266">
+          <div class="mb20">
+            <div class="input-container input-container_row input-container_row_sb">
+              <label class="forms__input_label" for="default">dropdown</label>
+              <p class="forms__input_label forms__input_label_mb20_color5">DEFAULT</p>
+            </div>
+            <select class="forms__input forms__input_select forms__input_select_color50" id="default" name="id" size="1">
+              <option value="2 спальни, 2 кровати">2 спальни, 2 кровати</option>
+            </select>
+          </div>
+          <div class="input-container input-container_row input-container_row_sb">
+            <label class="forms__input_label" for="expanded">dropdown</label>
+            <p class="forms__input_label forms__input_label_mb20_color5">EXPANDED</p>
+          </div>
+          <select class="forms__input forms__input_select forms__input_select_color50" id="expanded" name="id" size="1">
+            <option value="2 спальни, 2 кровати">2 спальни, 2 кровати</option>
+          </select>
+          <div class="mb49">
+            <div class="dropdown dropdown__rooms">
+              <div class="dropdown__items">
+                <p class="forms__input_label forms__input_label_mb7">СПАЛЬНИ</p>
+                <div class="dropdown__item mb7">
+                  <div class="dropdown__minus dropdown__minus_bc50"></div>
+                  <div class="dropdown__quantity">2</div>
+                  <div class="dropdown__plus dropdown__plus_bc50"></div>
+                </div>
+              </div>
+              <div class="dropdown__items mb7">
+                <p class="forms__input_label forms__input_label_mb7">КРОВАТИ</p>
+                <div class="dropdown__item">
+                  <div class="dropdown__minus dropdown__minus_bc50"></div>
+                  <div class="dropdown__quantity">2</div>
+                  <div class="dropdown__plus dropdown__plus_bc50"></div>
+                </div>
+              </div>
+              <div class="dropdown__items">
+                <p class="forms__input_label forms__input_label_mb7">ВАННЫЕ КОМНАТЫ</p>
+                <div class="dropdown__item">
+                  <div class="dropdown__minus dropdown__minus_bc25"></div>
+                  <div class="dropdown__quantity">0</div>
+                  <div class="dropdown__plus dropdown__plus_bc50"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mb49">
+            <div class="expand-check-list expand-check-list_w266">
+              <p class="forms__input_label">expandable checkbox list</p><i class="material-icons">keyboard_arrow_down</i>
+            </div>
+          </div>
+          <div class="mb17">
+            <div class="expand-check-list expand-check-list_w266">
+              <p class="forms__input_label">expandable checkbox list</p><i class="material-icons">keyboard_arrow_up</i>
+            </div>
+          </div>
+          <div class="mb102">
+            <div class="input-container input-container_mb10 input-container_row">
+              <input class="forms__check-box" id="Завтрак" type="checkbox" name="Завтрак"/>
+              <label class="forms__check-box_label" for="Завтрак">Завтрак</label>
+            </div>
+            <div class="input-container input-container_mb10 input-container_row">
+              <input class="forms__check-box" id="Письменный стол" type="checkbox" name="Письменный стол"/>
+              <label class="forms__check-box_label" for="Письменный стол">Письменный стол</label>
+            </div>
+            <div class="input-container input-container_mb10 input-container_row">
+              <input class="forms__check-box" id="Стул для кормления" type="checkbox" name="Стул для кормления"/>
+              <label class="forms__check-box_label" for="Стул для кормления">Стул для кормления</label>
+            </div>
+            <div class="input-container input-container_mb10 input-container_row">
+              <input class="forms__check-box" id="Кроватка" type="checkbox" name="Кроватка"/>
+              <label class="forms__check-box_label" for="Кроватка">Кроватка</label>
+            </div>
+            <div class="input-container input-container_mb10 input-container_row">
+              <input class="forms__check-box" id="Телевизор" type="checkbox" name="Телевизор"/>
+              <label class="forms__check-box_label" for="Телевизор">Телевизор</label>
+            </div>
+            <div class="input-container input-container_mb10 input-container_row">
+              <input class="forms__check-box" id="Шампунь" type="checkbox" name="Шампунь"/>
+              <label class="forms__check-box_label" for="Шампунь">Шампунь</label>
+            </div>
+          </div>
+        </div>
+        <div class="subcontainer subcontainer_row subcontainer__space-between">
+          <div class="subcontainer subcontainer_formElements subcontainer_formElements_w45">
+            <div class="input-container input-container_row input-container_row_sb">
+              <label class="forms__input_label" for="default">dropdown</label>
+              <p class="forms__input_label forms__input_label_mb20_color5"></p>
+            </div>
+            <select class="forms__input forms__input_select forms__input_select_color50" id="default" name="id" size="1">
+              <option value="Сколько гостей">Сколько гостей</option>
+            </select>
+            <div class="mb102">
+              <div class="dropdown dropdown__rooms">
+                <div class="dropdown__items mb7">
+                  <p class="forms__input_label forms__input_label_mb7">ВЗРОСЛЫЕ</p>
+                  <div class="dropdown__item">
+                    <div class="dropdown__minus dropdown__minus_bc25"></div>
+                    <div class="dropdown__quantity">0</div>
+                    <div class="dropdown__plus dropdown__plus_bc50"></div>
+                  </div>
+                </div>
+                <div class="dropdown__items mb7">
+                  <p class="forms__input_label forms__input_label_mb7">ДЕТИ</p>
+                  <div class="dropdown__item">
+                    <div class="dropdown__minus dropdown__minus_bc25"></div>
+                    <div class="dropdown__quantity">0</div>
+                    <div class="dropdown__plus dropdown__plus_bc50"></div>
+                  </div>
+                </div>
+                <div class="dropdown__items">
+                  <p class="forms__input_label forms__input_label_mb7">МЛАДЕНЦЫ</p>
+                  <div class="dropdown__item mb17">
+                    <div class="dropdown__minus dropdown__minus_bc25"></div>
+                    <div class="dropdown__quantity">0</div>
+                    <div class="dropdown__plus dropdown__plus_bc50"></div>
+                  </div>
+                </div>
+                <div class="dropdown__commands mb7">
+                  <div class="dropdown__command"></div>
+                  <div class="dropdown__command">ПРИМЕНИТЬ</div>
+                </div>
+              </div>
+            </div>
+            <p class="forms__input_label forms__input_label_mb16">rich checkbox buttons</p>
+            <div class="mb10 w266">
+              <div class="input-container input-container_mb10">
+                <input class="forms__check-box" id="corridor" type="checkbox" name="corridor"/>
+                <label class="forms__check-box_label forms__check-box_label_rich" for="corridor">Широкий коридор</label>
+                <div class="ml30 mb4">
+                  <p class="forms__check-box_descr">Ширина коридоров в номере <br> не менее 91 см.</p>
+                </div>
+              </div>
+            </div>
+            <div class="w266">
+              <div class="input-container input-container_mb10">
+                <input class="forms__check-box" id="invalid" type="checkbox" name="invalid"/>
+                <label class="forms__check-box_label forms__check-box_label_rich" for="invalid">Помощник для инвалидов</label>
+                <div class="ml30 mb4">
+                  <p class="forms__check-box_descr">На 1 этаже вас встретит специалист <br>и проводит до номера.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="subcontainer subcontainer_formElements subcontainer_formElements_w45">
+            <div class="input-container input-container_row input-container_row_sb">
+              <label class="forms__input_label" for="default">dropdown</label>
+              <p class="forms__input_label forms__input_label_mb20_color5"></p>
+            </div>
+            <select class="forms__input forms__input_select forms__input_select_color50" id="default" name="id" size="1">
+              <option value="3 гостя">3 гостя</option>
+            </select>
+            <div class="mb102">
+              <div class="dropdown dropdown__rooms">
+                <div class="dropdown__items mb7">
+                  <p class="forms__input_label forms__input_label_mb7">ВЗРОСЛЫЕ</p>
+                  <div class="dropdown__item">
+                    <div class="dropdown__minus dropdown__minus_bc25"></div>
+                    <div class="dropdown__quantity">2</div>
+                    <div class="dropdown__plus dropdown__plus_bc50"></div>
+                  </div>
+                </div>
+                <div class="dropdown__items mb7">
+                  <p class="forms__input_label forms__input_label_mb7">ДЕТИ</p>
+                  <div class="dropdown__item">
+                    <div class="dropdown__minus dropdown__minus_bc25"></div>
+                    <div class="dropdown__quantity">1</div>
+                    <div class="dropdown__plus dropdown__plus_bc50"></div>
+                  </div>
+                </div>
+                <div class="dropdown__items">
+                  <p class="forms__input_label forms__input_label_mb7">МЛАДЕНЦЫ</p>
+                  <div class="dropdown__item mb17">
+                    <div class="dropdown__minus dropdown__minus_bc25"></div>
+                    <div class="dropdown__quantity">0</div>
+                    <div class="dropdown__plus dropdown__plus_bc50"></div>
+                  </div>
+                </div>
+                <div class="dropdown__commands mb7">
+                  <div class="dropdown__command">ОЧИСТИТЬ</div>
+                  <div class="dropdown__command">ПРИМЕНИТЬ</div>
+                </div>
+              </div>
+            </div>
+            <p class="forms__input_label forms__input_label_mb16">BULLET LIST</p>
+            <div class="mb10">
+              <div class="bullet">
+                <div class="bullet__point"></div>
+                <p class="bullet__prescr">Нельзя с питомцами</p>
+              </div>
+            </div>
+            <div class="mb10">
+              <div class="bullet">
+                <div class="bullet__point"></div>
+                <p class="bullet__prescr">Без вечеринок и мероприятий</p>
+              </div>
+            </div>
+            <div class="mb10">
+              <div class="bullet">
+                <div class="bullet__point"></div>
+                <p class="bullet__prescr">Время прибытия — после 13:00, а выезд до 12:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container_formElements pb131">
+        <div class="subcontainer subcontainer_formElements mrauto">
+          <div class="mb17">
+            <div class="comfort">
+              <div class="comfort__font-symbol"><i class="material-icons">insert_emoticon</i></div>
+              <div class="comfort__texts">
+                <p class="comfort__text_bold">Комфорт</p>
+                <p class="comfort__text_regular">Шумопоглощающие стены</p>
+              </div>
+            </div>
+          </div>
+          <div class="mb23">
+            <div class="line280x1"></div>
+          </div>
+          <div class="mb17">
+            <div class="comfort">
+              <div class="comfort__font-symbol"><i class="material-icons">location_city</i></div>
+              <div class="comfort__texts">
+                <p class="comfort__text_bold">Удобство</p>
+                <p class="comfort__text_regular">Окно в каждой из спален</p>
+              </div>
+            </div>
+          </div>
+          <div class="line280x1"></div>
+        </div>
+        <div class="subcontainer subcontainer_formElements_w62">
+          <div class="mb13">
+            <div class="comfort">
+              <div class="comfort__photo"><img src="./assets/img/murad_sarafanov.png"/></div>
+              <div class="comfort__texts">
+                <p class="comfort__text_bold">Мурад Сарафанов</p>
+                <p class="comfort__text_regular">5 дней назад</p>
+              </div>
+            </div>
+          </div>
+          <div class="subcontainer subcontainer_row">
+            <div class="mr14">
+            </div>
+            <p class="comfort comfort__text_regular">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--if jQuery-->
+    <!--	<script src="node_modules/jquery/dist/jquery.js"></script>-->
+  </body>
+</html>

@@ -1,0 +1,11 @@
+mixin btn-small-fullcolor(text, attr)
+    button.buttons.button__small.buttons__small_fullcolor(data-modal=attr) #{text}
+mixin btn-small-fadecolor(text, attr)
+    button.buttons.button__small.buttons__small_fadecolor(data-modal=attr) #{text}
+mixin btn-small-bordercolor(text, attr)
+    .gradient-box(data-modal=attr) #{text}
+mixin btn-small-borderfade(text, attr)
+    button.buttons.buttons__small.buttons__small_borderfade(data-modal=attr) #{text}
+
+mixin btn-big-fullcolor(text, attr)
+    button.buttons.buttons__big_text(data-modal=attr) #{text}

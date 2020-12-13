@@ -1,0 +1,7 @@
+mixin toggle(text, id)
+    .input-container.input-container_row
+        .button-toggle.r(id="buttons-1")
+            input.forms__toggle_on(id=id)
+            .knobs
+            .layer
+        label.forms__check-box_label.forms__check-box_label_ml10(for=id) #{text}

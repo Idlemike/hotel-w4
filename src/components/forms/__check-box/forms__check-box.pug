@@ -1,0 +1,11 @@
+mixin check-box(text)
+    .input-container.input-container_mb10.input-container_row
+        input.forms__check-box(id=text type="checkbox" name=text)
+        label.forms__check-box_label(for=text) #{text}
+
+mixin check-box-rich(options)
+    .input-container.input-container_mb10
+        input.forms__check-box(id=options.subject type="checkbox" name=options.subject)
+        label.forms__check-box_label.forms__check-box_label_rich(for=options.subject) #{options.text}
+        .ml30.mb4
+            p.forms__check-box_descr !{options.caption}

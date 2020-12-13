@@ -1,0 +1,57 @@
+mixin dropdown(label, id, state, text)
+        .input-container.input-container_row.input-container_row_sb
+            label.forms__input_label(for=id) #{label}
+            p.forms__input_label.forms__input_label_mb20_color5 #{state}
+        select.forms__input.forms__input_select.forms__input_select_color50(id=id name="id" size="1")
+            option(value=text) #{text}
+
+mixin dropdown-rooms(bedrooms, beds, bathrooms)
+    .dropdown.dropdown__rooms
+        .dropdown__items
+            p.forms__input_label.forms__input_label_mb7 СПАЛЬНИ
+            .dropdown__item.mb7
+                .dropdown__minus.dropdown__minus_bc50
+                .dropdown__quantity #{bedrooms}
+                .dropdown__plus.dropdown__plus_bc50
+        .dropdown__items.mb7
+            p.forms__input_label.forms__input_label_mb7 КРОВАТИ
+            .dropdown__item
+                .dropdown__minus.dropdown__minus_bc50
+                .dropdown__quantity #{beds}
+                .dropdown__plus.dropdown__plus_bc50
+        .dropdown__items
+            p.forms__input_label.forms__input_label_mb7 ВАННЫЕ КОМНАТЫ
+            .dropdown__item
+                .dropdown__minus.dropdown__minus_bc25
+                .dropdown__quantity #{bathrooms}
+                .dropdown__plus.dropdown__plus_bc50
+
+mixin dropdown-guests(grownups, children, infants, left_command, right_command)
+    .dropdown.dropdown__rooms
+        .dropdown__items.mb7
+            p.forms__input_label.forms__input_label_mb7 ВЗРОСЛЫЕ
+            .dropdown__item
+                .dropdown__minus.dropdown__minus_bc25
+                .dropdown__quantity #{grownups}
+                .dropdown__plus.dropdown__plus_bc50
+        .dropdown__items.mb7
+            p.forms__input_label.forms__input_label_mb7 ДЕТИ
+            .dropdown__item
+                .dropdown__minus.dropdown__minus_bc25
+                .dropdown__quantity #{children}
+                .dropdown__plus.dropdown__plus_bc50
+        .dropdown__items
+            p.forms__input_label.forms__input_label_mb7 МЛАДЕНЦЫ
+            .dropdown__item.mb17
+                .dropdown__minus.dropdown__minus_bc25
+                .dropdown__quantity #{infants}
+                .dropdown__plus.dropdown__plus_bc50
+        .dropdown__commands.mb7
+            .dropdown__command #{left_command}
+            .dropdown__command #{right_command}
+
+mixin dropdown_w_o_border(label, id)
+    .dropdown_w_o_border
+        label.dropdown_w_o_border__label(for=id) #{label}
+        select.dropdown_w_o_border__select(id=id name="id" size="1")
+        option(value=text) #{text}

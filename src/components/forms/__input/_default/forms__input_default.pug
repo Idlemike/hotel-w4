@@ -1,0 +1,6 @@
+mixin textfield-default(label, text, state)
+    .input-container
+        .input-container.input-container_mb0.input-container_row.input-container_row_sb
+            label.forms__input_label(for=text) #{label}
+            p.forms__input_label.forms__input_label_mb20_color5 #{state}
+        input.forms__input.forms__input_default(id=text type=text name=label placeholder=text)

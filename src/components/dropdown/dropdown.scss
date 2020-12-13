@@ -1,0 +1,132 @@
+$purple_color: #bc9cff;
+$green_color: #6fcf97;
+$bg-color: #e5e5e5;
+$ds100-color: #1f2041;
+$ds75-color: rgba(31, 32, 65, 0.75);
+$ds50-color: rgba(31, 32, 65, 0.5);
+$ds25-color: rgba(31, 32, 65, 0.25);
+$ds10-color: rgba(31, 32, 65, 0.1);
+$ds5-color: rgba(31, 32, 65, 0.05);
+$border: 5px;
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  min-width: 190px;
+  padding: 7px 7px 7px 15px;
+  border: 1px solid $ds50-color;
+  justify-content: space-around;
+
+  &__rooms {
+    width: 100%;
+    min-width: 190px;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    min-width: 92px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__minus {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    &_bc25 {
+      border: 1px solid $ds25-color;
+    }
+
+    &_bc50 {
+      border: 1px solid $ds50-color;
+    }
+
+    &::before {
+      display: block;
+      padding-top: 3px;
+      content: "-";
+      text-align: center;
+      color: $ds50-color;
+      font-size: 18px;
+    }
+  }
+
+  &__plus {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    &_bc25 {
+      border: 1px solid $ds25-color;
+    }
+
+    &_bc50 {
+      border: 1px solid $ds50-color;
+    }
+
+    &::before {
+      display: block;
+      padding-top: 3px;
+      content: "+";
+      text-align: center;
+      color: $ds50-color;
+      font-size: 18px;
+    }
+  }
+
+  &__quantity {
+    text-align: center;
+    text-transform: uppercase;
+    color: $ds100-color;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+  }
+
+  &_mb50 {
+    margin-bottom: 50px;
+  }
+
+  &__commands {
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    color: $purple_color;
+    font-size: 12px;
+    font-weight: 700;
+    justify-content: space-between;
+  }
+}
+
+.dropdown_w_o_border {
+  display: flex;
+  margin: auto 2rem auto 0;
+  align-items: center;
+
+  &__select {
+    position: relative;
+    padding: 0;
+    color: $ds50-color;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &__label {
+    color: $ds50-color;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,150 @@
+extends ../base/default
+include ../utils/sharedHTMLfunctions
+include ../../components/forms/__input/_default/forms__input_default
+include ../../components/dropdown/dropdown
+include ../../components/expand-check-list/_expand-check-list
+include ../../components/forms/__check-box/forms__check-box
+include ../../components/forms/__toggle/_on/forms__toggle_on
+include ../../components/forms/__radio/forms__radio
+include ../../components/buttons/buttons
+include ../../components/comfort/comfort
+include ../../components/forms/__bullet/forms__bullet
+include ../../components/forms/__input/_arrow/forms__input_arrow
+include ../../components/forms/__toggle/_heart12/forms__toggle_heart12
+
+append config
+    - var title = "form&elements"
+
+block content
+    .page
+        include ../../components/brand/_brand
+        .container_formElements.mt65.mb102
+            .subcontainer.subcontainer_formElements
+                form
+                    .input-container_mb20
+                        +textfield-default('TEXT FIELD', 'Email', 'DEFAULT')
+                    .input-container_mb20
+                        +textfield-default('TEXT FIELD', 'This is pretty awesome', 'HOVER/FOCUS')
+                    .input-container.mb20
+                        +dropdown('dropdown', 'Сколько гостей', '')
+                    .mb40
+                        +textfield-default('MASKED TEXT FIELD', 'ДД.ММ.ГГГГ', '')
+                    .input-container__wrapper
+                        .input-container.mb40.w150
+                            +dropdown('date dropdown', 'dropdown-mask', '', 'ДД.ММ.ГГГГ')
+                        .input-container.mb40.w150
+                            +dropdown('date dropdown', 'dropdown-date', '', '19.08.2019')
+                    .input-container.mb40.w266
+                        +dropdown('filter date dropdown', 'dropdown-filter', '', '19авг - 23 авг')
+                    +input_arrow('subscription text field', 'email-subscr', 'Email', 'email')
+            .subcontainer.subcontainer_formElements
+                form
+                    p.forms__input_label.forms__input_label_mb16 Checkbox Buttons
+                    .input-container.input-container_mb20
+                        +check-box('Можно курить')
+                        +check-box('Можно с питомцами')
+                        +check-box('Можно пригласить гостей до 10 человек')
+                    p.forms__input_label.forms__input_label_mb16 Radio Buttons
+                    .input-container__wrapper
+                        +radio('Мужчина', 'radio-man')
+                        +radio('Женщина', 'radio-woman')
+                    p.forms__input_label.forms__input_label_mb16 Toggle
+                    .input-container_mb14
+                        +toggle('Получать спецпредложения', 'toggle-on')
+                    .input-container_mb40
+                        +toggle('Получать спецпредложения', 'toggle-off')
+                    p.forms__input_label.forms__input_label_mb16 like button
+                    .input-container__wrapper_left.input-container_mb40
+                        include ../../components/forms/__toggle/_heart/forms__toggle_heart
+                        +toggle-like('favorite', 'toggle-favorite', 12)
+                    p.forms__input_label.forms__input_label_mb16 RATE BUTTON
+                    .input-container_row_sb
+                        .form-wrapper
+                            +outputRating(4)
+                        .form-wrapper
+                            +outputRating(5)
+            .subcontainer.subcontainer_formElements
+                form
+                    .input-container_mb40
+                        .input-container.input-container_row_sb_w266.input-container_mb14
+                            p.forms__input_label.forms__input_label_mb20 Range Slider
+                            p.forms__input_label.forms__input_label_mb20.forms__input_label_mb20_color5 5000₽ - 10 000₽
+                        img(src='/assets/img/input-range.svg')
+                    p.forms__input_label.forms__input_label_mb16 buttons
+                    .input-container.input-container__wrapper_w218.input-container_mb30
+                        +btn-small-fullcolor('CLICK ME', 'btn-sm-fullcolor')
+                        +btn-small-fadecolor('CLICK ME', 'btn-sm-fadecolor')
+                    .input-container.input-container_mb30.input-container__wrapper_w218
+                        +btn-small-bordercolor('CLICK ME', 'btn-sm-bordercolor')
+                        +btn-small-borderfade('CLICK ME', 'btn-sm-fadecolor')
+                    .input-container.input-container__wrapper_flexstart.input-container__wrapper_mb30
+                        p.form__text-link.form__text-link_mb30.form__text-link_mr20.form__text-link_fade CLICK ME
+                        p.form__text-link.form__text-link_mb30.form__text-link_strong CLICK ME
+                    .button__big_mb40
+                        +btn-big-fullcolor('перейти к оплате', 'btn-big')
+                    p.forms__input_label.forms__input_label_mb16 pagination
+                    include ../../components/pagination/pagination
+        .container_formElements.mb102
+            .subcontainer.subcontainer_formElements.subcontainer_formElements_w266
+                .mb20
+                    +dropdown('dropdown', 'default', 'DEFAULT', '2 спальни, 2 кровати')
+                +dropdown('dropdown', 'expanded', 'EXPANDED','2 спальни, 2 кровати')
+                .mb49
+                    +dropdown-rooms(2, 2, 0)
+                .mb49
+                    +expand-check-list('expandable checkbox list', 'keyboard_arrow_down')
+                .mb17
+                    +expand-check-list('expandable checkbox list', 'keyboard_arrow_up')
+                .mb102
+                    +check-box('Завтрак')
+                    +check-box('Письменный стол')
+                    +check-box('Стул для кормления')
+                    +check-box('Кроватка')
+                    +check-box('Телевизор')
+                    +check-box('Шампунь')
+            .subcontainer.subcontainer_row.subcontainer__space-between
+                .subcontainer.subcontainer_formElements.subcontainer_formElements_w45
+                    +dropdown('dropdown', 'default', '', 'Сколько гостей')
+                    .mb102
+                        +dropdown-guests(0, 0, 0, '', 'ПРИМЕНИТЬ')
+                    p.forms__input_label.forms__input_label_mb16 rich checkbox buttons
+                    .mb10.w266
+                        +check-box-rich({text: 'Широкий коридор', caption: "Ширина коридоров в " +
+                            "номере <br> не менее 91 см.", subject: 'corridor'})
+                    .w266
+                        +check-box-rich({text: 'Помощник для инвалидов', caption:'На 1 этаже вас ' +
+                            'встретит' +
+                                ' специалист <br>и проводит до номера.', subject: 'invalid'})
+                .subcontainer.subcontainer_formElements.subcontainer_formElements_w45
+                    +dropdown('dropdown', 'default', '', '3 гостя')
+                    .mb102
+                        +dropdown-guests(2, 1, 0, 'ОЧИСТИТЬ', 'ПРИМЕНИТЬ')
+                    p.forms__input_label.forms__input_label_mb16 BULLET LIST
+                    .mb10
+                        +bullet('Нельзя с питомцами')
+                    .mb10
+                        +bullet('Без вечеринок и мероприятий')
+                    .mb10
+                        +bullet('Время прибытия — после 13:00, а выезд до 12:00')
+        .container_formElements.pb131
+            .subcontainer.subcontainer_formElements.mrauto
+                .mb17
+                    +comfort("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
+                .mb23
+                    .line280x1
+                .mb17
+                    +comfort("location_city", "Удобство", "Окно в каждой из спален")
+                .line280x1
+            .subcontainer.subcontainer_formElements_w62
+                .mb13
+                    +feedback("./assets/img/murad_sarafanov.png", "Мурад Сарафанов", "5 дней назад")
+                .subcontainer.subcontainer_row
+                    .mr14
+                        include ../../components/forms/__toggle/_heart12/forms__toggle_heart12
+                    p.comfort.comfort__text_regular Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+
+
+
+
+
+

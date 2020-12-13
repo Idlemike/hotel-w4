@@ -1,0 +1,34 @@
+.range {
+  width: 50rem;
+  height: 1rem;
+  border-radius: 0.4rem;
+  background-color: #ddd;
+}
+
+.range__button_1,
+.range__button_2 {
+  position: absolute;
+  top: 50%;
+  width: 2rem;
+  height: 2rem;
+  cursor: move;
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 50%;
+  background-color: #999;
+}
+
+.range__between {
+  position: absolute;
+  width: 0;
+  height: 5px;
+  margin-top: 3px;
+  border: none;
+  background-color: #593;
+}
+
+.range_inpt1,
+.range_inpt2 {
+  width: 50px;
+  margin-top: 20px;
+}

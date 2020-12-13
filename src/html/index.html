@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<% for (var css in htmlWebpackPlugin.files.css) { %>
+	<link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
+	<% } %>
+	<title><%= htmlWebpackPlugin.options.title || 'Webpack App'%></title>
+	<% if (htmlWebpackPlugin.files.favicon) { %>
+	<link rel="shortcut icon" href="<%= htmlWebpackPlugin.files.favicon%>">
+	<% } %>
+</head>
+
+<body>
+<div class="wrapper">
+	<div id="app">
+		<header>
+			<!--header here-->
+		</header>
+		<section id="main" style="background-image: url(/assets/img/image_04.png)">
+			<h1>Webpack------------------</h1>
+			<button @click="component = !component">Show vue component</button>
+			<img src="/assets/img/image-03.png" alt="picture">
+		</section>
+		<example-component v-if="component"></example-component>
+		<footer>
+			<!--footer here-->
+		</footer>
+	</div>  <!--end #app wrapper-->
+</div> <!--end main wrapper-->
+
+<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+<script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+<% } %>
+</body>
+</html>

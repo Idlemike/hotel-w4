@@ -1,0 +1,28 @@
+@import '../utils/libs';
+@import '../utils/vars';
+@import '../utils/mixins';
+@import '../utils/fonts';
+@import '../utils/reset';
+@import '../../../theme/global';
+@import '../../../components/header-main/header-main';
+@import '../../../components/footer-main/footer-main';
+
+.main {
+  position: relative;
+
+  &__img {
+    width: 100%;
+  }
+
+  &__text {
+    position: absolute;
+    right: 13.4rem;
+    bottom: 1.8rem;
+    display: inline-block;
+    width: 30rem;
+    text-align: right;
+    color: $ds75-color;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}

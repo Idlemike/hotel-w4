@@ -1,0 +1,23 @@
+@import '../utils/libs';
+@import '../utils/vars';
+@import '../utils/mixins';
+@import '../utils/fonts';
+@import '../utils/reset';
+@import '../../../theme/global';
+@import '../../../components/brand/brand';
+@import '../../../components/forms/__bullet/forms__bullet';
+@import '../../../components/forms/__check-box/forms__check-box';
+@import '../../../components/forms/__input/_range/forms__input_range';
+@import '../../../components/forms/__toggle/_heart12/forms__toggle_heart12';
+@import '../../../components/forms/__toggle/forms__toggle';
+@import '../../../components/forms/forms';
+@import '../../../components/comfort/comfort';
+@import '../../../components/pagination/pagination';
+
+.line280x1 {
+  top: 1632px;
+  left: 140px;
+  width: 280px;
+  height: 1px;
+  background: $ds10-color;
+}

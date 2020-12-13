@@ -1,0 +1,223 @@
+* {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*:focus {
+  outline: none;
+}
+
+.knobs,
+.layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.button-toggle {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 4rem;
+  height: 2rem;
+  margin-right: 1.4rem;
+  //margin: -20px auto 0 auto
+  border: 1px solid $ds25-color;
+  border-radius: 1rem;
+  background: #fff;
+}
+
+.button-toggle.r,
+.button-toggle.r .layer {
+  border-radius: 1rem;
+}
+
+.forms__toggle_on {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.knobs {
+  z-index: 2;
+}
+
+.layer {
+  z-index: 1;
+  width: 100%;
+  transition: 0.3s ease all;
+  background-color: #fff;
+}
+
+#button-1 .knobs::before {
+  position: absolute;
+  top: 0.3rem;
+  left: 0.4rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  content: "";
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+  color: #fff;
+  border-radius: 10px;
+  background: $ds25-color;
+}
+
+#button-1 .forms__toggle_on:checked + .knobs::before {
+  top: 0.3rem;
+  left: 2.2rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  content: "";
+  color: #fff;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+}
+
+#button-1 .forms__toggle_on:checked ~ .layer {
+  border: 1px solid $purple_color;
+}
+
+#button-1 .knobs,
+#button-1 .knobs::before,
+#button-1 .layer {
+  transition: 0.3s ease all;
+}
+
+#button-2 .knobs::before {
+  position: absolute;
+  top: 0.3rem;
+  left: 0.4rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  content: "";
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+  color: #fff;
+  border-radius: 10px;
+  background: $ds25-color;
+}
+
+#button-2 .forms__toggle_on:checked + .knobs::before {
+  top: 3px;
+  left: 22px;
+  width: 12px;
+  height: 12px;
+  content: "";
+  color: #fff;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+}
+
+#button-2 .forms__toggle_on:checked ~ .layer {
+  border: 1px solid $purple_color;
+}
+
+#button-2 .knobs,
+#button-1 .knobs::before,
+#button-1 .layer {
+  transition: 0.3s ease all;
+}
+
+.heart,
+.layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.heart {
+  z-index: 2;
+}
+
+#button-3 .heart::before {
+  padding: 0.6rem 0.5rem;
+  content: url("../../../assets/img/like_blank.png");
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+  color: $ds25-color;
+  background-size: auto 100%;
+}
+
+#button-3 .forms__toggle_on:checked + .heart::before {
+  padding: 0.4rem 0.5rem;
+  content: url("../../../assets/img/like_filled.png");
+  color: $purple_color;
+  background-size: auto 100%;
+}
+
+#button-3 .forms__toggle_on:checked ~ .layer {
+  border: 1px solid $purple_color;
+}
+
+#button-3 .heart,
+#button-3 .heart::before,
+#button-1 .layer {
+  transition: 0.3s ease all;
+}
+
+#button-3 .heart::after {
+  padding: 0.6rem 0.5rem;
+  content: "1";
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+  color: $ds25-color;
+  background-size: auto 100%;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+#button-3 .forms__toggle_on:checked + .heart::after {
+  padding: 6px 5px;
+  content: "12";
+  color: $purple_color;
+  background-size: auto 100%;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+#button-3 .forms__toggle_on:checked ~ .layer {
+  border: 1px solid $purple_color;
+}
+
+#button-3 .heart,
+#button-3 .heart::before,
+#button-1 .layer {
+  transition: 0.3s ease all;
+}
+
+#button-4 .heart::before {
+  padding: 0.6rem 0.5rem;
+  content: "&#xE87C;";
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+  background-size: auto 100%;
+}
+
+#button-4 .forms__toggle_on:checked + .heart::before {
+  padding: 0.4rem 0.5rem;
+  content: url("../../../assets/img/like_filled.png");
+  color: $purple_color;
+  background-size: auto 100%;
+}
+
+#button-4 .forms__toggle_on:checked ~ .layer {
+  border: 1px solid $purple_color;
+}
+
+#button-4 .heart,
+#button-3 .heart::before,
+#button-1 .layer {
+  transition: 0.3s ease all;
+}
+
+#button-4 .heart::after {
+  content: "12";
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+  color: $purple_color;
+  background-size: auto 100%;
+  font-size: 1.2rem;
+  font-weight: 400;
+}

@@ -1,0 +1,135 @@
+/* Fonts:
+  https://github.com/vedees/webpack-template/blob/master/README.md#import-js-files
+  ========================================================================== */
+
+@import 'mixins';
+
+/*
+  One of the ways:
+  1. handle method,
+  2. use mixin;
+*/
+
+// 1. Example handle method (without mixin):
+
+/*
+  // Base Helvetica (example):
+  @font-face {
+    font-family: "Helvetica-Base";
+    src: url('/assets/fonts/Helvetica/Base/Helvetica-Base.eot'); // IE9 Compat Modes
+    src: url('/assets/fonts/Helvetica/Base/Helvetica-Base.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+         url('/assets/fonts/Helvetica/Base/Helvetica-Base.woff') format('woff'), // Pretty Modern Browsers
+         url('/assets/fonts/Helvetica/Base/Helvetica-Base.ttf')  format('truetype'), // Safari, Android, iOS
+         url('/assets/fonts/Helvetica/Base/Helvetica-Base.svg') format('svg'); // Legacy iOS
+  }
+*/
+
+// 2. Example with mixin (example):
+
+/* NOTE:
+  1. do NOT use expansion (.woff, .svg etc) for path! Path will be '/assets/fonts/OpenSans/opensans;
+  2, files required: `.woff, .woffs` (by default) OR `eot. .woff, .woffs, .svg, .ttf` if you use another mixin.
+*/
+
+// Base OpenSans:
+// @include font-face("OpenSans", "/assets/fonts/OpenSans/opensans");
+// @include font-face("OpenSans", "/assets/fonts/OpenSans/opensanslight", 300);
+// @include font-face("OpenSans", "/assets/fonts/OpenSans/opensanssemibold", 600);
+// @include font-face("OpenSans", "/assets/fonts/OpenSans/opensansbold", bold);
+
+// Italic OpenSans:
+// @include font-face("OpenSans", "/assets/fonts/OpenSans/opensansItalic", 400, italic);
+// @include font-face("OpenSans", "/assets/fonts/OpenSans/opensansLightItalic", 300, italic);
+// @include font-face("OpenSans", "/assets/fonts/OpenSans/opensansSemiBoldItalic", 600, italic);
+// @include font-face("OpenSans", "/assets/fonts/OpenSans/opensansBoldItalic", bold, italic);
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/Montserrat-Bold.woff") format("woff"),
+  url("/assets/fonts/Montserrat-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/Montserrat-Regular.woff") format("woff"),
+  url("/assets/fonts/Montserrat-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/Quicksand-Bold.woff") format("woff"),
+  url("/assets/fonts/Quicksand-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/Quicksand-Regular.woff") format("woff"),
+  url("/assets/fonts/Quicksand-Regular.woff") format("woff");
+}
+
+/////////////////////////////////////////////////////////////////
+@font-face {
+  font-family: "icomoon";
+  src: url("/assets/fonts/icomoon.eot?texz5z");
+  src:  url("/assets/fonts/icomoon.eot?texz5z#iefix") format("embedded-opentype"),
+  url("/assets/fonts/icomoon.ttf?texz5z") format("truetype"),
+  url("/assets/fonts/icomoon.woff?texz5z") format("woff"),
+  url("/assets/fonts/icomoon.svg?texz5z#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-down:before {
+  content: "\e900";
+}
+.icon-chevron-small-down:before {
+  content: "\e901";
+}
+.icon-chevron-small-up:before {
+  content: "\e902";
+}
+.icon-chevron-up:before {
+  content: "\e903";
+}
+.icon-facebook:before {
+  content: "\e904";
+}
+.icon-instagram-with-circle:before {
+  content: "\e905";
+}
+.icon-twitter:before {
+  content: "\e906";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-twitter1:before {
+  content: "\ea96";
+}
+

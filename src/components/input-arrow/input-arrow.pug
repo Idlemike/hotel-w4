@@ -1,0 +1,6 @@
+mixin input_arrow(text, id, placehold, type, symbol)
+    .input-container
+        label.input-arrow_label(for=id) #{text}
+        input.input-arrow.input-arrow_default.input-arrow_select_medium(id=id, type=type, name=id, placeholder=placehold)
+        button(type="submit" class="arrow arrow_animated")
+           i.material-icons #{symbol}

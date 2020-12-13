@@ -1,0 +1,15 @@
+mixin comfort(symbol, textBold, textRegular)
+    .comfort
+        .comfort__font-symbol
+            i.material-icons #{symbol}
+        .comfort__texts
+            p.comfort__text_bold #{textBold}
+            p.comfort__text_regular #{textRegular}
+
+mixin feedback(href, textBold, textRegular)
+    .comfort
+        .comfort__photo
+            img(src=href)
+        .comfort__texts
+            p.comfort__text_bold #{textBold}
+            p.comfort__text_regular #{textRegular}

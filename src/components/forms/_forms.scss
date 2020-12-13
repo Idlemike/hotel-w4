@@ -1,0 +1,338 @@
+.forms {
+  &__input {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 44px;
+    border-radius: 4px;
+    background: #fff;
+
+    &_default {
+      border: 1px solid $ds25-color;
+    }
+
+    &::-webkit-input-placeholder {
+      text-overflow: ellipsis;
+      color: $ds25-color;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+
+    &::-moz-placeholder {
+      text-overflow: ellipsis;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+
+    &:-moz-placeholder {
+      text-overflow: ellipsis;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+
+    &:-ms-input-placeholder {
+      text-overflow: ellipsis;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+
+    &_hover {
+      border: 1px solid $ds50-color;
+    }
+
+    &::-webkit-input-placeholder {
+      text-overflow: ellipsis;
+      color: $ds75-color;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+
+    &::-moz-placeholder {
+      text-overflow: ellipsis;
+      color: $ds75-color;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+
+    &:-moz-placeholder {
+      text-overflow: ellipsis;
+      color: $ds75-color;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+
+    &:-ms-input-placeholder {
+      text-overflow: ellipsis;
+      color: $ds75-color;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+
+    &_select {
+      display: block;
+      width: 100%; /* от ширины блока div */
+      //min-width: 190px;
+      padding: 0.75rem 2.5rem 0.75rem 1rem;
+      color: $ds75-color;
+      border: 1px solid $ds25-color;
+      border-radius: 4px 4px 0 0;
+      outline: 0;
+      background: url("/assets/img/select-down.svg") no-repeat 95% 50%;
+      font-size: 14px;
+      font-weight: 400;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      appearance: none;
+
+      &_arrow-up {
+        background: url("/assets/img/expand_up.svg") no-repeat 95% 50%;
+      }
+
+      &_small {
+        width: 100%;
+      }
+
+      &_medium {
+        width: 26rem;
+      }
+
+      &_color50 {
+        border: 1px solid $ds50-color;
+      }
+    }
+
+    &_label {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      color: $ds100-color;
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.5rem;
+
+      &_mb20 {
+        display: block;
+        margin-bottom: 2rem;
+
+        &_color5 {
+          color: $ds50-color;
+          font-weight: 400;
+        }
+      }
+
+      &_mb7 {
+        margin-bottom: 0.7rem;
+      }
+
+      &_mb16 {
+        display: inline-block;
+        margin-bottom: 1.6rem;
+      }
+    }
+
+    &_masked {
+      color: $ds25-color;
+      border: 1px solid $ds25-color;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 2.4rem;
+    }
+
+    &_arrow {
+      height: 2rem;
+      padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+      background: url(/assets/img/arrow_forward_black.png) no-repeat 23rem 1rem;
+      background-size: auto 50%;
+    }
+  }
+
+  &__check-box {
+    box-sizing: border-box;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    border: 1px solid $ds25-color;
+    border-radius: 0.4rem;
+    background: #fff;
+
+    &_vector {
+      border: 1px solid $purple_color;
+    }
+
+    &_vector::before {
+      padding: 0.5rem;
+      content: url("/assets/img/vector.svg");
+      background-size: auto 100%;
+    }
+
+    &_label {
+      color: $ds50-color;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 2rem;
+
+      &_rich {
+        max-width: 100%;
+        color: $ds75-color;
+        font-weight: 700;
+      }
+    }
+
+    &_ml10 {
+      margin-left: 10px;
+    }
+
+    &_descr {
+      max-width: 100%;
+      margin: 0;
+      color: $ds50-color;
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+
+  &__radio {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1.4rem;
+    border: 1px solid $ds25-color;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+    &_checked {
+      border: 1px solid $ds25-color;
+    }
+
+    &_checked::before {
+      position: absolute;
+      top: 0.4rem;
+      right: 0.4rem;
+      display: block;
+      width: 1.2rem;
+      height: 1.2rem;
+      content: "";
+      border-radius: 50%;
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%) no-repeat;
+      background-size: auto 100%;
+    }
+  }
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: left;
+
+  &_mb20 {
+    margin-bottom: 20px;
+  }
+
+  &_mb0 {
+    margin-bottom: 0;
+  }
+
+  &_mb10 {
+    margin-bottom: 10px;
+  }
+
+  &_mb14 {
+    margin-bottom: 14px;
+  }
+
+  &_mb30 {
+    margin-bottom: 30px;
+  }
+
+  &_mb40 {
+    margin-bottom: 40px;
+  }
+
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    &_flexstart {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    &_left {
+      display: flex;
+      flex-direction: row;
+      width: 9rem;
+      justify-content: space-between;
+    }
+
+    &_w218 {
+      display: flex;
+      width: 21.8rem;
+      flex-flow: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &_two {
+    width: 46%;
+  }
+
+  &_row {
+    flex-direction: row;
+
+    &_sb {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &_w266 {
+        display: flex;
+        flex-direction: row;
+        max-width: 26.6rem;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &_width40 {
+    width: 4rem;
+  }
+}
+
+.form-wrapper {
+  display: inline;
+  margin-right: 2rem;
+}
+
+.form__text-link {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  &_mb30 {
+    margin-bottom: 3rem;
+  }
+
+  &_mr20 {
+    margin-right: 2rem;
+  }
+
+  &_fade {
+    color: $purple_color;
+  }
+
+  &_strong {
+    color: $ds50-color;
+  }
+}

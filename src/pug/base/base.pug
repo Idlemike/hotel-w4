@@ -1,0 +1,28 @@
+include ./base-data
+block variables
+
+include ../../components/layout/layout
+include ../../components/header/header
+include ../../components/footer/footer
+
+doctype  html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content="initial-scale=1.0, width=device-width")
+        meta(name="description", content=description)
+        title #{title}
+    body(class=pageClass)
+        +layout()
+            +layout__header()
+                +layout__container({basis: 1000, align: 'center'})
+                    block header
+                        +header({menuItems: locals.menuItems})
+            +layout__main()
+                +layout__container({basis: 1000, align: 'center'})
+                    block main
+            +layout__footer()
+                +layout__container({basis: 1000, align: 'center'})
+                    block footer
+                        +footer({items: locals.menuItems})
+        block script

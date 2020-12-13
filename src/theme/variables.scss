@@ -1,0 +1,64 @@
+/***** Variables *****/
+$xxs: 320px;
+$xs: 575px;
+$sm: 767px;
+$md: 991px;
+$lg: 1199px;
+$xl: 1440px;
+
+$color-first: #4eb7a8;
+$color-second: #e75735;
+$color-first-dark: #28a290;
+$color-second-dark: #bf3e1f;
+$color-disabled: #e5e5e5;
+
+$purple_color: #bc9cff;
+$green_color: #6fcf97;
+$bg-color: #e5e5e5;
+$ds100-color: #1f2041;
+$ds75-color: rgba(31, 32, 65, 0.75);
+$ds50-color: rgba(31, 32, 65, 0.5);
+$ds25-color: rgba(31, 32, 65, 0.25);
+$ds10-color: rgba(31, 32, 65, 0.1);
+$ds5-color: rgba(31, 32, 65, 0.05);
+$border: 5px;
+
+/***** Mixins *****/
+@mixin media-breakpoint-up($width) {
+  @media (min-width: $width + 1) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-down($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-between($min-width, $max-width) {
+  @media (min-width: $min-width + 1) and (max-width: $max-width) {
+    @content;
+  }
+}
+
+@mixin column($screen-width, $count) {
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  flex-shrink: 0;
+
+  @include media-breakpoint-up($screen-width) {
+    flex-basis: (100% / 12 * $count);
+  }
+}
+
+@mixin firefox-only {
+  @at-root {
+    @-moz-document url-prefix() {
+      & {
+        @content;
+      }
+    }
+  }
+}

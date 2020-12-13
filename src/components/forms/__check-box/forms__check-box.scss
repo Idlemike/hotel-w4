@@ -1,0 +1,96 @@
+// выносим за пределы видимости
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked),
+input[type="radio"]:checked,
+input[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -999.9rem;
+}
+
+// добавим отступы к соседствующим меткам
+input[type="checkbox"]:checked + label,
+input[type="checkbox"]:not(:checked) + label,
+input[type="radio"]:checked + label,
+input[type="radio"]:not(:checked) + label {
+  position: relative;
+  display: inline-block;
+  padding-left: 2.8rem;
+  cursor: pointer;
+  line-height: 2rem;
+}
+
+// Перед метками добавим стилизованные контейнеры для наших пользовательских элементов. Для флажков это будут квадраты с немного закругленными для красоты краями, а для переключателей — просто небольшие круги:
+input[type="checkbox"]:checked + label::before,
+input[type="checkbox"]:not(:checked) + label::before,
+input[type="radio"]:checked + label::before,
+input[type="radio"]:not(:checked) + label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  content: "";
+  border: 1px solid $ds25-color;
+  background-color: #fff;
+}
+
+input[type="checkbox"]:checked + label::before,
+input[type="checkbox"]:not(:checked) + label::before {
+  border-radius: 0.4rem;
+}
+
+input[type="radio"]:checked + label::before,
+input[type="radio"]:not(:checked) + label::before {
+  border-radius: 100%;
+}
+
+// Теперь добавим индикаторы выбора. Для флажков это будут галки, для переключателей — заполненные цветом круги меньшего размера, чем сам контейнер. Для большего эффекта зададим также небольшую анимацию
+input[type="checkbox"]:checked + label::after,
+input[type="checkbox"]:not(:checked) + label::after,
+input[type="radio"]:checked + label::after,
+input[type="radio"]:not(:checked) + label::after {
+  position: absolute;
+  content: "";
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked + label::after,
+input[type="checkbox"]:not(:checked) + label::after {
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 0.8rem;
+  height: 0.6rem;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  border-bottom: 3px solid $purple_color;
+  border-left: 3px solid $purple_color;
+  border-radius: 1px;
+}
+
+input[type="radio"]:checked + label::after,
+input[type="radio"]:not(:checked) + label::after {
+  top: 0.4rem;
+  left: 0.4rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 100%;
+  background-color: $purple_color;
+}
+
+// Чтобы изобразить знак галки, мы поворачиваем небольшой прямоугольник, две стороны которого окрашены в цвет, на 45 градусов против часовой стрелки.
+// Осталось скрыть индикаторы выбора, когда элемент не выбран, и, соответственно, отображать их, когда элемент находится в выбранном состоянии:
+input[type="checkbox"]:not(:checked) + label::after,
+input[type="radio"]:not(:checked) + label::after {
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked + label::after,
+input[type="radio"]:checked + label::after {
+  opacity: 1;
+}

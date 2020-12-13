@@ -1,0 +1,14 @@
+include ../menu/menu
+
+//-
+  options.menuItems - массив елементов меню
+
+mixin header(options)
+  if !options
+    - options = {}
+
+  .header
+    a.header__logo(href = '/')
+      | Flat
+    .header__menu
+      +menu({items: options.menuItems})

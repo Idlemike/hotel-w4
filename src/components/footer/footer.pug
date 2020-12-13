@@ -1,0 +1,17 @@
+//-
+  options.items - массив с элементами меню
+  options.items[0].name - имя элемента меню
+  options.items[0].href - ссылка элемента меню
+
+mixin footer(options)
+  if !options
+    - options = {}
+  if !options.items
+    - options.items = []
+
+  .footer
+     nav.footer__nav
+       for item in options.items
+         a.footer__nav-item(href = item.href)= item.name
+     .footer__copyright
+       | &copy; 2016-2017

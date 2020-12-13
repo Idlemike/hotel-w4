@@ -1,0 +1,16 @@
+extends ../base/default
+include ../../components/header-main/header-main
+include ../../components/footer-main/footer-main
+include ../../components/input-arrow/input-arrow
+
+append config
+    - var title = "Landing Page"
+
+block content
+    .page
+        +header-main()
+        main.main
+            img.main__img(src="/assets/img/image3.png", alt = 'room')
+            p.main__text Лучшие номера для вашей работы, отдыха и просто вдохновения
+        +footer-main()
+        +subfooter()

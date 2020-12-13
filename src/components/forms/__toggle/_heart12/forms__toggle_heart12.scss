@@ -1,0 +1,67 @@
+.toggle-like {
+  position: relative;
+  z-index: 1000;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 4rem;
+  height: 2rem;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: #bc9cff;
+  border: solid 2px transparent; /* !importanté */
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 40px;
+  align-items: center;
+  //padding: 0 2em;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 10px #000;
+  }
+
+  &__number {
+    position: absolute;
+    top: 0.3rem;
+    right: 0.5rem;
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+
+  &::before {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    margin: -2px; /* !importanté */
+    content: "";
+    border-radius: 2.2rem; /* !importanté */
+    background: linear-gradient(to bottom, #bc9cff, #8ba4f9);
+  }
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    margin: 0; /* !importanté */
+    content: "";
+    border-radius: 2.2rem; /* !importanté */
+    background-color: #fff;
+    //background: rgba(255, 255, 255, .9);
+  }
+}
+
+.toggle-like i.material-icons {
+  position: absolute;
+  top: 0.3rem;
+  left: 0.5rem;
+  font-size: 1rem;
+}
